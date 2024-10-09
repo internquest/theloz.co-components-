@@ -5,6 +5,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --1pathlength: 0;
+  --2pathlength: 0;
+  --3pathlength: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +30,21 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .loz-footer-logo-1 {
+    stroke-dasharray: var(--1pathlength);
+    stroke-dashoffset: var(--1pathlength);
+  }
+
+  .loz-footer-logo-2 {
+    stroke-dasharray: var(--2pathlength);
+    stroke-dashoffset: var(--2pathlength);
+  }
+
+  .loz-footer-logo-3 {
+    stroke-dasharray: var(--3pathlength);
+    stroke-dashoffset: var(--3pathlength);
   }
 }
 
