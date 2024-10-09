@@ -5,9 +5,26 @@ import Navlinks from './Navlinks'
 const Navbar = () => {
     return (
         <div className='bg-[rgb(243_244_251/_1)] h-min bg-fixed border-t-4 border-b-4 border-[#27272a] border-solid text-[rgb(18,18,18)]  '>
-            <header className='h-[100px]  flex items-center justify-end aft990:items-end aft990:py-0 lg:items-stretch   '>
+            <header className='h-[100px]  flex items-center justify-between aft990:justify-end aft990:items-end aft990:py-0 lg:items-stretch   '>
+                <div className='ml-0'>
+                    <details className='flex'>
+                        <summary className='h-[56px] w-[51px]  p-0 text-[rgb(18,18,18)] cursor-pointer inline-block underline underline-offset-[.3rem] bg-transparent text-[1.4rem] list-none'>
+                            <div className='flex justify-center items-center pl-5'>
+                                <div className='menu-mobile w-[60px] flex flex-wrap justify-center items-center cursor-pointer flex-col relative transition-all duration-300 ease-[cubic-bezier(.175,.885,.32,1.275)]  '>
+                                    <div className='circle'></div>
+                                    <div className='circle'></div>
+                                    <div className='circle'></div>
+                                    <div className='circle !-ml-6 absolute opacity-0 top-[50%] !mt-[-6px] left-[50%]'></div>
+                                    <div className='circle !ml-3 opacity-0 absolute top-[50%] !mt-[-6px] left-[50%] '></div>
+                                </div>
+                            </div>
+                        </summary>
+
+                    </details>
+                    <div className=''></div>
+                </div>
                 <h1 className='flex items-center aft750:text-[56px] aft750:font-semibold aft750:leading-[125%] text-[28px] font-semibold leading-[150%]  text-[rgb(18,18,18)] '>
-                    <div className=' h-[100px]  items-center  absolute flex aft990:left-0 top-0'>
+                    <div className=' h-[100px]  items-center left-[4rem] aft750:left-[5rem] aft990:text-center absolute flex aft990:left-0 top-0'>
                         <a href="/" className='aft990:ml-[24px] p-[.75rem] w-full h-min  cursor-pointer text-[1.4rem] items-center flex'>
                             <div className='w-full inline-block '>
                                 <Image src={logo} alt='logo' className='w-[130px] h-auto max-w-full' sizes='(max-width: 260px) 50vw,(min-width:261px) 130px' />
@@ -19,7 +36,7 @@ const Navbar = () => {
                 <div class="box-border border-0 border-solid h-[100px] items-center justify-center border-l-4 pl-[calc(-4px+2.5rem)] text-white bg-black pr-10 flex [grid-area:icons] justify-self-end aft750:w-[230px]">
                     <div class="box-border border-0 border-solid border-[rgb(229,_231,_235)]"></div>
                     <div class="group box-border border-0 border-solid border-[rgb(229,_231,_235)] text-[rgb(18,18,18)] gap-x-10 flex items-center justify-center h-[56px] w-[51px] p-0 relative">
-                        <span class="   items-center justify-center h-full">
+                        <span class="   items-center justify-center h-full aft750:block hidden">
                             <span class="box-border border-0 border-solid border-[rgb(229,_231,_235)] text-[rgb(255,255,255)] flex items-center justify-center h-full no-underline text-[20px] font-semibold leading-[150%] uppercase">Cart</span>
                         </span>
                         <a href="/cart" id="cart-icon-bubble" aria-label="View Cart" role="button" aria-haspopup="dialog" class="box-border border-0 border-solid border-[rgb(229,_231,_235)] underline cursor-pointer inline-block border-[none] [box-shadow:none] [text-underline-offset:0.3rem] bg-transparent text-[1.4rem] [font-family:inherit]">

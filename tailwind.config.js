@@ -10,6 +10,7 @@ module.exports = {
       screens: {
         'aft750': { 'min': '750px' },
         'aft990': { 'min': '990px' },
+        't749px': { 'max': '749px' },
 
       },
       colors: {

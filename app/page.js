@@ -54,16 +54,16 @@ export default function Home() {
     <main className="">
       <section>
         <div className="min-h-[calc(100vh-300px)] grid grid-cols-10 ">
-          <div className="flex items-center justify-center  w-full relative z-[2] col-span-4 bg-[#6f7bd4] ">
+          <div className="flex items-center t749px:order-2 col-span-12 justify-center  w-full relative z-[2] aft750:col-span-5 lg:col-span-4 bg-[#6f7bd4] ">
             <div className="py-[3.5rem] px-[2rem] z-[1] relative h-full flex-col *:justify-around bg-transparent text-[rgb(18,18,18)] ">
-              <div className="flex  flex-col xl:max-w-[28rem]  mt-0 justify-center items-center max-w-[24rem] mx-auto ">
+              <div className="flex  flex-col  xl:max-w-[28rem]  mt-0 justify-center items-center max-w-[24rem] mx-auto ">
                 <div className="banner__heading">
                   <div className="h-[115px] inline-block text-center relative overflow-y-hidden ">
                     <ul className="relative ![animation-timing-function:cubic-bezier(1,-.3,0,1.3)]" >
                       {betterwith.map((item, index) => (
 
                         <li key={index} className="h-[115px]">
-                          <h1 className=" aft990:text-[98px] font-black   lg:max-w-[400px] aft750:min-w-[300px] text-[rgb(39_39_42/1)] leading-[1.25]  uppercase text-center ">{item}</h1>
+                          <h1 className="text-[78px] aft750:text-[78px] aft990:text-[98px] font-black   lg:max-w-[400px] aft750:min-w-[300px] text-[rgb(39_39_42/1)] leading-[1.25]  uppercase text-center ">{item}</h1>
                         </li>
                       ))}
 
@@ -73,7 +73,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-[1.8rem] leading-[1.8] tracking-[.06em] text-[rgb(18,18,18)] text-center mt-0 ">
-                <h2 className="aft990:text-[98px] aft750:text-[78px] break-words [word-break:break-word] text-[rgb(39_39_42/1)] leading-[1] font-normal ">better with</h2>
+                <h2 className="text-[78px] aft990:text-[98px] aft750:text-[78px] break-words [word-break:break-word] text-[rgb(39_39_42/1)] leading-[1] font-normal ">better with</h2>
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" width="212" height="72" viewBox="0 0 806.97 267.32" fill="none" className="h-[72px] w-auto mt-5 mx-auto">
                 <polygon points="806.97 5.22 552.36 5.22 552.36 90.9 667.65 90.9 552.36 183.27 552.36 262 806.97 262 806.97 176.59 691.09 176.59 806.97 84.47 806.97 5.22" style={{ fill: '#262929', strokeWidth: '0px' }}></polygon><polygon points="95.4 5.24 0 5.24 0 262.03 230.71 262.03 230.71 176.62 95.4 176.62 95.4 5.24" style={{ fill: '#262929', strokeWidth: '0px' }}></polygon><path d="m391.43,0c-78.01,0-141.24,59.84-141.24,133.66s63.24,133.66,141.24,133.66,141.24-59.84,141.24-133.66S469.43,0,391.43,0Zm51.07,154.17c-5.66,23.64-26.42,40.6-51.05,40.64h-.05c-24.63-.04-45.39-17-51.05-40.64-3.31-13.85-.61-29.08,7.76-40.8,5.47-7.66,12.51-13.72,19.37-19.99,6.24-5.7,12.25-11.59,16.94-18.69,2.95-4.46,5.24-9.25,6.98-14.72v-.14s.02.05.02.07c0-.02.02-.05.02-.07v.14c1.74,5.47,4.03,10.25,6.98,14.72,4.69,7.1,10.7,13,16.94,18.69,6.86,6.27,13.91,12.34,19.37,19.99,8.37,11.72,11.07,26.95,7.76,40.8Z" style={{ fill: '#262929', strokeWidth: '0px' }}></path>
@@ -87,7 +87,7 @@ export default function Home() {
                     </button>
                   </form>
                 </div>
-                <a href="" className=" group aft750:flex-grow text-[20px] flex justify-center items-center pt-[.8rem] px-[1.5rem] pb-[.625rem]  cursor-pointer hover:bg-[#121212] hover:transition-colors hover:ease-linear hover:duration-300 hover:text-white bg-white font-semibold uppercase leading-[150%] text-[#121212] transition-all duration-300 min-w-[calc(10rem+4px)] relative rounded-[100px] border-2 border-solid border-[#121212] gap-[.625rem]   ">
+                <a href="" className=" group flex-grow text-[20px] flex justify-center items-center pt-[.8rem] px-[1.5rem] pb-[.625rem]  cursor-pointer hover:bg-[#121212] hover:transition-colors hover:ease-linear hover:duration-300 hover:text-white bg-white font-semibold uppercase leading-[150%] text-[#121212] transition-all duration-300 min-w-[calc(10rem+4px)] relative rounded-[100px] border-2 border-solid border-[#121212] gap-[.625rem]   ">
                   Learn more
                   <span className="relative -top-[.15rem]">
                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="10" viewBox="0 0 320 512" className="transition-all duration-300 ease-linear group-hover:translate-x-[.5rem] group-hover:fill-white">
@@ -100,7 +100,10 @@ export default function Home() {
             </div>
 
           </div>
-          <div className="af750:h-full relative w-full overflow-hidden lg:col-span-6 aft750:border-l-4 aft750:border-solid aft750:border-[#27272a]">
+
+
+
+          <div className="t749px:h-[80vh] col-span-12 af750:h-full relative w-full overflow-hidden aft750:col-span-5 lg:col-span-6 aft750:border-l-4 aft750:border-solid aft750:border-[#27272a]">
             <video
               className="absolute top-0 left-0 w-full h-full object-cover"
               autoPlay
@@ -117,15 +120,19 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+
+      {/* moisture mouth with */}
       <div className="">
-        <div className="aft750:py-[7rem] aft750:px-[3rem] flex flex-col gap-[2rem] mx-auto  relative">
+        <div className="py-20 px-6 aft750:py-[7rem] aft750:px-[3rem] flex flex-col gap-[2rem] mx-auto  relative">
           <div className="flex flex-col items-center justify-center">
-            <h2 className="aft750:text-[72px] text-[#27272a] font-black tracking-[1.44px] lg:max-w-[48rem] aft750:mr-[2.5rem] text-center mb-[2.5rem] leading-[100%] break-words">
+            <h2 className="text-[48px] aft750:text-[72px] text-[#27272a] font-black tracking-[1.44px] lg:max-w-[48rem] aft750:mr-[2.5rem] text-center mb-[2.5rem] leading-[100%] break-words">
               Moisturize your mouth with
             </h2>
-            <a href="/" className="py-6 px-14 bg-[rgb(255,128,102) border-[rgb(39,39,42)] border-4 rotate-[-4.1deg]">
+            <a href="/" className="py-6 px-14 bg-[rgb(255,128,102) bg-[rgb(255,128,102)] border-[rgb(39,39,42)] border-4 rotate-[-4.1deg]">
               <div className="rotate-[4.1deg]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="212" height="72" viewBox="0 0 806.97 267.32" fill="none" className="h-[72px] w-auto mt-5 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="212" height="72" viewBox="0 0 806.97 267.32" fill="none" className="h-[50px] w-auto  ">
                   <polygon points="806.97 5.22 552.36 5.22 552.36 90.9 667.65 90.9 552.36 183.27 552.36 262 806.97 262 806.97 176.59 691.09 176.59 806.97 84.47 806.97 5.22" style={{ fill: '#262929', strokeWidth: '0px' }}></polygon><polygon points="95.4 5.24 0 5.24 0 262.03 230.71 262.03 230.71 176.62 95.4 176.62 95.4 5.24" style={{ fill: '#262929', strokeWidth: '0px' }}></polygon><path d="m391.43,0c-78.01,0-141.24,59.84-141.24,133.66s63.24,133.66,141.24,133.66,141.24-59.84,141.24-133.66S469.43,0,391.43,0Zm51.07,154.17c-5.66,23.64-26.42,40.6-51.05,40.64h-.05c-24.63-.04-45.39-17-51.05-40.64-3.31-13.85-.61-29.08,7.76-40.8,5.47-7.66,12.51-13.72,19.37-19.99,6.24-5.7,12.25-11.59,16.94-18.69,2.95-4.46,5.24-9.25,6.98-14.72v-.14s.02.05.02.07c0-.02.02-.05.02-.07v.14c1.74,5.47,4.03,10.25,6.98,14.72,4.69,7.1,10.7,13,16.94,18.69,6.86,6.27,13.91,12.34,19.37,19.99,8.37,11.72,11.07,26.95,7.76,40.8Z" style={{ fill: '#262929', strokeWidth: '0px' }}></path>
                 </svg>
               </div>
@@ -133,14 +140,14 @@ export default function Home() {
 
           </div>
           <div className="">
-            <h4 className="aft750:text-[48px] text-[#27272a] font-normal tracking-[1.44px] leading-[125%] text-center break-words">A small solution to a big problem.</h4>
+            <h4 className="text-[32px] aft750:text-[48px] text-[#27272a] font-normal tracking-[1.44px] leading-[125%] text-center break-words">A small solution to a big problem.</h4>
           </div>
         </div>
       </div>
       <div>
-        <div className="aft750:h-[200px] relative w-screen max-w-full overflow-x-hidden pt-16 pb-16 bg-[rgb(39,39,42)] ">
+        <div className="h-[170px]  aft750:h-[200px] relative w-screen max-w-full overflow-x-hidden pt-16 pb-16 bg-[rgb(39,39,42)] ">
           <div className="absolute whitespace-nowrap will-change-transform animate-marquee">
-            <div className="aft990:text-[96px] aft750:text-[78px] text-[#6f7bd4] font-semibold leading-[100%] tracking-[.025rem]">
+            <div className=" text-[48px] aft990:text-[96px] aft750:text-[78px] text-[#6f7bd4] font-semibold leading-[100%] tracking-[.025rem]">
 
               Saliva saving. Breath freshening. Tongue tickling. Tooth toughening. Saliva saving. Breath freshening. Tongue tickling. Tooth toughening.
 

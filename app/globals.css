@@ -46,6 +46,24 @@ body {
     stroke-dasharray: var(--3pathlength);
     stroke-dashoffset: var(--3pathlength);
   }
+
+  .footer-block {
+    @apply flex flex-col justify-between mt-0
+  }
+
+  .circle {
+    @apply w-3 h-3 m-[3px] bg-[#27272a] rounded-[50%]
+  }
+
+
+}
+
+details[open] .menu-mobile {
+  @apply rotate-[45deg]
+}
+
+details[open] .circle {
+  @apply opacity-100
 }
 
 @keyframes cycle {

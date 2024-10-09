@@ -5,7 +5,7 @@ import React from 'react'
 const Navlinks = () => {
     const path = usePathname()
     return (
-        <nav className='flex items-center h-full justify-center '>
+        <nav className='hidden aft990:flex aft990:items-center aft990:h-full aft990:justify-center '>
             <ul className='h-full items-center flex flex-wrap list-none p-0 m-0'>
                 <li className='h-full '>
                     <a href="/" className='group flex items-center menu-item'>
