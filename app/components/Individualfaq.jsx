@@ -18,7 +18,7 @@ const Individualfaq = ({ question, answer }) => {
 
 
         const handleTransitionEnd = () => {
-            console.log('shova');
+            // console.log('shova');
             // console.log(content);
             // console.log('Transition ended for open FAQ');
             // setMaxHeight('none');
@@ -44,7 +44,7 @@ const Individualfaq = ({ question, answer }) => {
     const renderAnswerContent = (content) => {
         switch (content.type) {
             case 'paragraph':
-                return <p>{content.content}</p>;
+                return <p className=''>{content.content}</p>;
             case 'list':
                 return (
                     <ul className=" pl-5 my-4 list-inside list-none">
@@ -61,10 +61,10 @@ const Individualfaq = ({ question, answer }) => {
     return (
         <div>
 
-            <div className={`aft750:mt-0 mb-0 text-[rgb(18,18,18)] border-t-[.1rem] border-b-[.1rem] border-solid ${open && 'border-[rgb(18_18_18/1)]'}  transition-all ease-[cubic-bezier(.4,0,.2,1)] border-b-[rgba(18_18_18/.08)] duration-150`}>
+            <div className={`aft750:mt-0 mb-0 text-[rgb(18,18,18)] border-t-[.1rem] border-b-[.1rem] border-solid ${open && 'border-[rgb(18_18_18/1)]'}  translate-x-0 ease-[cubic-bezier(.4,0,.2,1)] duration-150 border-b-[rgba(18_18_18/.08)] `}>
                 <details className='py-8' >
                     <summary onClick={() => setOpen(!open)} className='flex  relative cursor-pointer ' >
-                        <h3 className="opacity-75  text-[rgb(18,18,18)] transition-all ease-[cubic-bezier(.4,0,.2,1)]  duration-150 flex items-center max-w-[calc(100%-6rem)] min-h-[1.6rem] m-0 font-normal aft750:text-[2rem] leading-[2rem] [word-break:break-word]">
+                        <h3 className={` ${open ? 'opacity-100' : 'opacity-75'}  text-[rgb(18,18,18)] transition-all ease-[cubic-bezier(.4,0,.2,1)]  duration-150 flex items-center max-w-[calc(100%-6rem)] min-h-[1.6rem] m-0 font-normal text-[1.5rem] aft750:text-[2rem] leading-[2rem] [word-break:break-word]`}>
                             {question}
                         </h3>
 
@@ -79,7 +79,7 @@ const Individualfaq = ({ question, answer }) => {
                         ref={contentRef}
                         style={{ maxHeight: open ? maxHeight : '0px' }}
 
-                        className='mt-[1rem]  p-0 mb-0 overflow-hidden transition-[max-height] duration-500 ease-[ease-out] [word-break:break-word] [&_p]:text-[1.25rem] [&_p]:leading-[175%] [&_p]:font-normal [&_p]:mb-[1rem] [&_p]:last:mb-0'
+                        className='mt-[1rem]  p-0 mb-0 overflow-hidden transition-[max-height] duration-500 ease-[ease-out] [word-break:break-word] t749px:[&_p]:text-[18px] [&_p]:text-[1.25rem] [&_p]:leading-[175%] [&_p]:font-normal [&_p]:mb-[1rem] [&_p:last-child]:mb-0 [&_p]:[word-break:break-word]'
                     >
 
                         {answer.map((content, contentIndex) => (

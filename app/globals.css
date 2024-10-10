@@ -23,7 +23,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.menu-item {
+.lg-menu-item {
   @apply text-[1.25rem] font-semibold uppercase text-[#27272a] h-full cursor-pointer bg-transparent border-none outline-none
 }
 
@@ -55,6 +55,35 @@ body {
     @apply w-3 h-3 m-[3px] bg-[#27272a] rounded-[50%]
   }
 
+  details[open] .menu-drawer {
+    @apply transition-transform translate-x-0 top-[104px] duration-200
+  }
+
+  .menu-item {
+    @apply text-[#121212] hover:bg-[#6f7bd4] flex items-center leading-[1.3] mt-[-4px] pt-[2.2rem] p-8 text-[28px] font-semibold uppercase text-center justify-center cursor-pointer underline-offset-[.3rem]
+  }
+
+  /* 
+  .lg-menu-item {
+    @apply text-[#27272a] hover:bg-[#6f7bd4] flex items-center leading-[1.3] mt-[-4px] pt-[2.2rem] p-8 text-[28px] font-semibold uppercase text-center justify-center cursor-pointer underline-offset-[.3rem]
+  } */
+
+  .list-menu {
+    @apply p-0 m-0 list-none
+  }
+
+  .menu-item.active {
+    @apply text-white bg-[#6f7bd4]
+  }
+
+  .list-menu li:nth-child(2) a {
+    @apply border-t-4 border-black border-solid border-b-4
+  }
+
+  .nav-icon {
+    @apply w-[2.2rem] h-[2.2rem]
+  }
+
 
 }
 
@@ -65,6 +94,26 @@ details[open] .menu-mobile {
 details[open] .circle {
   @apply opacity-100
 }
+
+/* .menu-drawer {
+  @apply translate-x-[-100%]
+} */
+
+details .menu-drawer {
+  transition: transform .2s ease, visibility .2s ease;
+}
+
+
+details[open] .menu-drawer {
+  transition: transform .2s ease, visibility .2s ease;
+  transform: translate(0);
+  top: 104px;
+  visibility: visible;
+  /* transition-transform translate-x-0 top-[104px] duration-200 */
+}
+
+
+
 
 @keyframes cycle {
   0% {

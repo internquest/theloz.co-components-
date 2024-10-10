@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { praticovariable } from "./fonts/font";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`min-h-screen w-full bg-white antialiased`}
+        className={`min-h-screen w-full ${praticovariable.className} bg-white text-balance antialiased`}
       >
         <Navbar />
         {children}

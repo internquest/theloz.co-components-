@@ -1,13 +1,38 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useRef } from 'react'
 import logo from '@/app/assets/Loz_Logo_Black.svg'
 import Image from 'next/image'
 import Navlinks from './Navlinks'
+import MobileNavlinks from './MobileNavlinks'
+import { praticovariable } from '../fonts/font'
+
 const Navbar = () => {
+    const detailsRef = useRef(null);
+
+    useEffect(() => {
+        const details = detailsRef.current;
+        const body = document.body;
+
+        const toggleOverflow = () => {
+            if (details.open) {
+                body.classList.add('overflow-hidden');
+            } else {
+                body.classList.remove('overflow-hidden');
+            }
+        };
+
+        details.addEventListener('toggle', toggleOverflow);
+
+        return () => {
+            details.removeEventListener('toggle', toggleOverflow);
+        };
+    }, []);
+
     return (
-        <div className='bg-[rgb(243_244_251/_1)] h-min bg-fixed border-t-4 border-b-4 border-[#27272a] border-solid text-[rgb(18,18,18)]  '>
+        <div className='bg-[rgb(243_244_251/_1)] relative h-min bg-fixed border-t-4 border-b-4 border-[#27272a] border-solid text-[rgb(18,18,18)]  '>
             <header className='h-[100px]  flex items-center justify-between aft990:justify-end aft990:items-end aft990:py-0 lg:items-stretch   '>
-                <div className='ml-0'>
-                    <details className='flex'>
+                <div className='ml-0 aft990:hidden'>
+                    <details ref={detailsRef} className='flex'>
                         <summary className='h-[56px] w-[51px]  p-0 text-[rgb(18,18,18)] cursor-pointer inline-block underline underline-offset-[.3rem] bg-transparent text-[1.4rem] list-none'>
                             <div className='flex justify-center items-center pl-5'>
                                 <div className='menu-mobile w-[60px] flex flex-wrap justify-center items-center cursor-pointer flex-col relative transition-all duration-300 ease-[cubic-bezier(.175,.885,.32,1.275)]  '>
@@ -20,8 +45,9 @@ const Navbar = () => {
                             </div>
                         </summary>
 
+                        <MobileNavlinks />
+
                     </details>
-                    <div className=''></div>
                 </div>
                 <h1 className='flex items-center aft750:text-[56px] aft750:font-semibold aft750:leading-[125%] text-[28px] font-semibold leading-[150%]  text-[rgb(18,18,18)] '>
                     <div className=' h-[100px]  items-center left-[4rem] aft750:left-[5rem] aft990:text-center absolute flex aft990:left-0 top-0'>
@@ -33,11 +59,11 @@ const Navbar = () => {
                 </h1>
 
                 <Navlinks />
-                <div class="box-border border-0 border-solid h-[100px] items-center justify-center border-l-4 pl-[calc(-4px+2.5rem)] text-white bg-black pr-10 flex [grid-area:icons] justify-self-end aft750:w-[230px]">
+                <div class="box-border border-0 border-solid h-[100px] items-center justify-center border-l-4 pl-[calc(-4px+2.5rem)] text-white border-black bg-black pr-10 flex [grid-area:icons] justify-self-end aft750:w-[230px]">
                     <div class="box-border border-0 border-solid border-[rgb(229,_231,_235)]"></div>
                     <div class="group box-border border-0 border-solid border-[rgb(229,_231,_235)] text-[rgb(18,18,18)] gap-x-10 flex items-center justify-center h-[56px] w-[51px] p-0 relative">
                         <span class="   items-center justify-center h-full aft750:block hidden">
-                            <span class="box-border border-0 border-solid border-[rgb(229,_231,_235)] text-[rgb(255,255,255)] flex items-center justify-center h-full no-underline text-[20px] font-semibold leading-[150%] uppercase">Cart</span>
+                            <span class={`box-border border-0 border-solid border-[rgb(229,_231,_235)] text-[rgb(255,255,255)] flex items-center justify-center h-full no-underline text-[20px] font-semibold leading-[150%] uppercase ${praticovariable.className} `}>Cart</span>
                         </span>
                         <a href="/cart" id="cart-icon-bubble" aria-label="View Cart" role="button" aria-haspopup="dialog" class="box-border border-0 border-solid border-[rgb(229,_231,_235)] underline cursor-pointer inline-block border-[none] [box-shadow:none] [text-underline-offset:0.3rem] bg-transparent text-[1.4rem] [font-family:inherit]">
                             <svg
@@ -57,7 +83,7 @@ const Navbar = () => {
                                 </defs>
                             </svg>
                         </a>
-                        <span class="box-border border-0 border-solid border-[rgb(229,_231,_235)] overflow-hidden w-px h-px -m-[1px] p-0 border-[0px] [clip:rect(0px,_0px,_0px,_0px)] absolute [overflow-wrap:normal!important] flex items-center justify-center whitespace-nowrap">Cart</span>
+                        <span class="box-border border-0 border-solid border-[rgb(229,_231,_235)] overflow-hidden w-px h-px -m-[1px] p-0  [clip:rect(0px,_0px,_0px,_0px)] absolute [overflow-wrap:normal!important] flex items-center justify-center whitespace-nowrap">Cart</span>
                     </div>
                 </div>
             </header>

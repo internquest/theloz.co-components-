@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useInView, } from 'framer-motion'
 import Image from 'next/image'
+import { praticovariable } from '../fonts/font'
 
 const Footer = () => {
     // const [scope, animate] = useAnimate()
@@ -27,15 +28,15 @@ const Footer = () => {
                 <div className='max-w-[128rem] w-full my-0 mx-auto p-0 '>
                     <div className='pb-20 gap-20 justify-center items-center flex-col flex'>
                         <div className='flex flex-col flex-grow aft750:text-left aft750:mr-auto text-center  justify-center ml-auto'>
-                            <h2 className='font-normal  text-[32px] text-center max-w-[590px] mt-0 text-[#d4d4d8] leading-[115%]  mb-[42px]'>
-                                Sign up for updates, <br />
+                            <h2 className={`font-normal  text-[32px] text-center max-w-[590px] mt-0 text-[#d4d4d8] leading-[115%]  mb-[42px]  ${praticovariable.className}`}>
+                                Sign up for updates,{' '}
                                 <strong className='text-[#40c1ac] font-normal'>discounts</strong>
                                 {' '}and giveaways!
                             </h2>
                             <form action="" method='post' className='flex flex-col w-full relative aft750:items-start aft750:max-w-[36rem] aft750:justify-start aft750:m-0'>
                                 <div className='max-w-[36rem] w-full'>
                                     <div className='z-[0] relative w-full flex '>
-                                        <input type="email" name="" id="" autoComplete='email' required='true' className=' p-[1.5rem] pr-[5rem] border-2 border-solid border-black  bg-[#f4f4f5] text-black flex-grow text-left m-[1px]  appearance-none text-[1.6rem] w-full h-[4.5rem] min-w-[calc(7rem+2px)] relative leading-[1.5] tracking-[.04rem]' />
+                                        <input type="email" name="" id="" autoComplete='email' required='true' className=' p-[1.5rem] pr-[5rem] font-[inherit] border-2 border-solid border-black  bg-[#f4f4f5] text-black flex-grow text-left m-[1px]  appearance-none text-[1.6rem] w-full h-[4.5rem] min-w-[calc(7rem+2px)] relative leading-[1.5] tracking-[.04rem]' />
                                         <label className='text-black text-[20px] tracking-normal top-[1.3rem] absolute left-[2rem] mb-0 pointer-events-none [transition:top_.1s,font-size_.1s] leading-[1.5]'>your email address</label>
                                         <button className='w-[4.4rem] m-0 top-[3px] h-[calc(100%-6px)] z-[2] bg-[#ff8066] text-black right-[3px] border-l-2 border-solid border-black transition-all duration-200 ease-in-out flex items-center cursor-pointer justify-center overflow-hidden absolute'>
                                             <svg width="29" height="25" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-arrow">

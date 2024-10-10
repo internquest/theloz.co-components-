@@ -51,8 +51,8 @@ const Faq = () => {
         <main>
 
             <div>
-                <div className='lg:pt-48 lg:px-44 aft750:pt-28 aft750:px-12 aft750:-mb-28 pt-12 pb-0 px-6 mb-14 relative z-10 '>
-                    <div className='aft750:py-0 aft750:px-[5rem] my-0 mx-auto px-0 gap-16 flex-col flex max-w-[80rem] '>
+                <div className='lg:!pt-48 lg:!px-44 aft750:pt-28 aft750:px-12 aft750:-mb-28 pt-12 pb-0 px-6 -mb-14 relative z-10 '>
+                    <div className='!px-0  my-0 mx-auto aft750:px-0   gap-16 flex-col flex max-w-[80rem] '>
                         <p className='aft750:text-[1.5rem] leading-[2rem] text-[rgb(39_39_42/1)] text-center whitespace-nowrap gap-[.875rem] items-baseline flex'>FAQ
                             <span className=' w-[5.5625rem] h-[.125rem] bg-[rgb(39_39_42/1)]'></span>
                         </p>
@@ -61,8 +61,8 @@ const Faq = () => {
                 </div>
             </div>
             <section>
-                <div className='text-[(rgb(18,18,18)] bg-white bg-fixed '>
-                    <div className='relative z-0  lg:px-44  pt-[4.38rem] px-6'>
+                <div className='text-[rgb(18,18,18)] bg-white bg-fixed '>
+                    <div className='relative z-0 aft750:px-12 lg:!px-44   pt-[4.38rem] px-6'>
                         <div className='aft750:pt-[36px]  aft750:pb-[192px] pt-[27px] pb-[144px]'>
                             <div className='px-0 max-w-7xl '>
                                 <div className='flex p-0 '>
